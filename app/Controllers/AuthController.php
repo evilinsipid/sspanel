@@ -246,7 +246,7 @@ class AuthController extends BaseController
             }
 
             $res['ret'] = 1;
-            $res['msg'] = "验证码发送成功，请查收邮件。";
+            $res['msg'] = "验证码发送成功，请查收邮件。（邮件可能位于垃圾箱）";
             return $response->getBody()->write(json_encode($res));
         }
     }
@@ -292,6 +292,14 @@ class AuthController extends BaseController
             return $response->getBody()->write(json_encode($res));
         }
 
+        // check email
+        $user = User::where('email', $email)->first();
+        if ($user != null) {
+            $res['ret'] = 0;
+            $res['msg'] = "邮箱已经被注册了";
+            return $response->getBody()->write(json_encode($res));
+        }
+
         if (Config::get('enable_email_verify')=='true') {
             $mailcount = EmailVerify::where('email', '=', $email)->where('code', '=', $emailcode)->where('expire_in', '>', time())->first();
             if ($mailcount == null) {
@@ -299,13 +307,13 @@ class AuthController extends BaseController
                 $res['msg'] = "您的邮箱验证码不正确";
                 return $response->getBody()->write(json_encode($res));
             }
-            EmailVerify::where('email', '=', $email)->delete();
+            //EmailVerify::where('email', '=', $email)->delete();
         }
 
         // check pwd length
         if (strlen($passwd)<8) {
             $res['ret'] = 0;
-            $res['msg'] = "密码太短";
+            $res['msg'] = "密码请大于8位";
             return $response->getBody()->write(json_encode($res));
         }
 
@@ -313,14 +321,6 @@ class AuthController extends BaseController
         if ($passwd != $repasswd) {
             $res['ret'] = 0;
             $res['msg'] = "两次密码输入不符";
-            return $response->getBody()->write(json_encode($res));
-        }
-
-        // check email
-        $user = User::where('email', $email)->first();
-        if ($user != null) {
-            $res['ret'] = 0;
-            $res['msg'] = "邮箱已经被注册了";
             return $response->getBody()->write(json_encode($res));
         }
 
@@ -335,6 +335,10 @@ class AuthController extends BaseController
             $res['ret'] = 0;
             $res['msg'] = "此联络方式已经被注册了";
             return $response->getBody()->write(json_encode($res));
+        }
+
+        if (Config::get('enable_email_verify')=='true') {
+			EmailVerify::where('email', '=', $email)->delete();
         }
 
         // do reg user

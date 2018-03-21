@@ -25,6 +25,9 @@
 								<div class="card-main">
 									<div class="card-inner margin-bottom-no">
 										<p class="card-heading"><i class="icon icon-md">notifications_active</i>公告栏</p>
+                                        {if $user->class==0}
+                                            <p><h4><span class="icon icon-lg">start</span> 尊敬的{$user->user_name}，您还未购买任何套餐或套餐已过期。请先到<a href="/user/code">充值界面</a>充值金额，再到<a href="/user/shop">商店界面</a>购买套餐，否则将无法使用。</p></h4>
+										{/if}
 									<!--<p>其他公告请到<a href="/user/announcement"/>公告面板</a>查看。</p>-->
 										{if $ann != null}
 										<p>{$ann->content}</p>
@@ -390,9 +393,6 @@
 								<div class="card-main">
 									<div class="card-inner margin-bottom-no">
 										<p class="card-heading"><i class="icon icon-md">account_circle</i>账号使用情况</p>
-                                        {if $user->class==0}
-                                            <p><h4><span class="icon icon-lg">start</span> 尊敬的{$user->user_name}，您还未购买任何套餐或套餐已过期。请先到<a href="/user/code">充值界面</a>充值金额，再到<a href="/user/shop">商店界面</a>购买套餐，否则将无法使用。</p></h4>
-										{/if}
 										<dl class="dl-horizontal">
 											<p><dt>账号等级</dt>
 											<dd><i class="icon icon-md t4-text">stars</i>&nbsp;{$user->class}</dd></p>
