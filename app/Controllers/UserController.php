@@ -783,10 +783,12 @@ class UserController extends BaseController
         }
         $codes=InviteCode::where('user_id', $this->user->id)->orderBy("created_at", "desc")->paginate(15, ['*'], 'page', $pageNum);
         $codes->setPath('/user/invite');
+        $paybacks = Payback::where("ref_by", $this->user->id)->orderBy("datetime", "desc")->paginate(15, ['*'], 'page', $pageNum);
+        $paybacks->setPath('/user/invite');
 
 
 
-        return $this->view()->assign('codes', $codes)->display('user/invite.tpl');
+        return $this->view()->assign('codes', $codes)->assign("paybacks", $paybacks)->display('user/invite.tpl');
     }
 
     public function doInvite($request, $response, $args)

@@ -109,7 +109,6 @@
 												<table class="table">
 													<thead>
 													<tr>
-														<th>###</th>
 														<th>返利用户</th>
 														<th>返利金额</th>
 													</tr>
@@ -117,7 +116,6 @@
 													<tbody>
 													{foreach $paybacks as $payback}
 														<tr>
-															<td><b>{$payback->id}</b></td>
 															{if $payback->user()!=null}
 																<td>{$payback->user()->user_name}
 																</td>
