@@ -768,8 +768,18 @@ class UserController extends BaseController
     public function invite($request, $response, $args)
     {
         $pageNum = 1;
+        $n = $this->user->invite_num;
         if (isset($request->getQueryParams()["page"])) {
             $pageNum = $request->getQueryParams()["page"];
+        }
+        if ($n > 0) {
+            $char = Tools::genRandomChar(32);
+            $code = new InviteCode();
+            $code->code = $char;
+            $code->user_id = $this->user->id;
+            $code->save();
+            $this->user->invite_num = 0;
+            $this->user->save();
         }
         $codes=InviteCode::where('user_id', $this->user->id)->orderBy("created_at", "desc")->paginate(15, ['*'], 'page', $pageNum);
         $codes->setPath('/user/invite');

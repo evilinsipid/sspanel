@@ -276,10 +276,13 @@ class AuthController extends BaseController
         if (Config::get('enable_invite_code')=='true') {
             $c = InviteCode::where('code', $code)->first();
             if ($c == null) {
-                $res['ret'] = 0;
+            /*    $res['ret'] = 0;
                 $res['msg'] = "邀请码无效";
-                return $response->getBody()->write(json_encode($res));
-            }
+                return $response->getBody()->write(json_encode($res));    */
+                $panduan = 'false';
+            } else {
+                $panduan = 'true';
+            }    //邀请码为空时报错及不通过
         }
 
         // check email format
@@ -361,7 +364,7 @@ class AuthController extends BaseController
         $user->invite_num = Config::get('inviteNum');
         $user->auto_reset_day = Config::get('reg_auto_reset_day');
         $user->auto_reset_bandwidth = Config::get('reg_auto_reset_bandwidth');
-        if (Config::get('enable_invite_code')=='true') {
+        if ($panduan=='true') {
             $user->ref_by = $c->user_id;
         } else {
             $user->ref_by = 0;
@@ -396,9 +399,9 @@ class AuthController extends BaseController
 
             Radius::Add($user, $user->passwd);
 
-            if (Config::get('enable_invite_code')=='true') {
+            /*if (Config::get('enable_invite_code')=='true') {
                 $c->delete();
-            }
+            }*/  //注册成功后删除邀请码
 
             return $response->getBody()->write(json_encode($res));
         }

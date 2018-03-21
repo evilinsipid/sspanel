@@ -98,16 +98,17 @@
 										
 										
 										
-										<!--    {if $enable_invite_code == 'true'}    -->
-											<div class="form-group form-group-label">
+										{if $enable_invite_code == 'true'}    
+											<!--<div class="form-group form-group-label">
 												<div class="row">
 													<div class="col-md-10 col-md-push-1">
-														<label class="floating-label" for="code">邀请码(可选)</label>
+														<label class="floating-label" for="code">邀请码</label>
 														<input class="form-control" id="code" type="text" value="{$code}">
 													</div>
 												</div>
-											</div>
-										<!--    {/if}    -->
+											</div>    -->
+                                            <input id="code" type="hidden" value="{$code}">
+										{/if}    
 										
 										{if $geetest_html != null}
 											<div class="form-group form-group-label">

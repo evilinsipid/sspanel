@@ -41,7 +41,7 @@
 
 										<p>邀请码请给认识的需要的人。</p>
 
-										<p>邀请有记录，若被邀请的人违反用户协议，您将会有连带责任。</p>
+									<!--	<p>邀请有记录，若被邀请的人违反用户协议，您将会有连带责任。</p>    -->
 									</div>
 									
 								</div>
@@ -56,11 +56,32 @@
 									<div class="card-inner">
 										<p class="card-heading">说明</p>
 
-										<p>邀请码暂时无法购买，请珍惜。</p>
+										<p>当您的余额达到30可发工单请求提现。</p>
 
-										<p>公共页面不定期发放邀请码，如果用完邀请码可以关注公共邀请。</p>
+									<!--	<p>公共页面不定期发放邀请码，如果用完邀请码可以关注公共邀请。</p>    -->
 										
-										<p>您每拉一位用户注册，当 TA 充值时您就会获得 TA 充值金额的 <code>{$config["code_payback"]} %</code> 的提成。</p>
+										<p>您每拉一位用户注册，当对方充值时您就会获得对方充值金额的 <code>{$config["code_payback"]} %</code> 的提成。</p>
+									</div>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+                    
+					<div class="col-lg-12 col-md-12">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									<div class="card-inner">
+                                        <p class="card-heading">邀请链接</p>
+                                        {foreach $codes as $code}
+
+                                            <input type="text" class="input form-control form-control-monospace" name="input1" readonly="" value="http://insipid.info/auth/register?code={$code->code}"><br>
+                                        
+                                            <small class="text-muted">每个账号唯一邀请链接，不可变更</small><br>
+                                        
+                                            <button class="copy-text btn btn-subscription" type="button" data-clipboard-text="http://insipid.info/auth/register?code={$code->code}">点击拷贝</button>
+                                        {/foreach}
 									</div>
 									
 								</div>
@@ -68,7 +89,20 @@
 						</div>
 					</div>
 					
-					<div class="col-lg-12 col-md-12">
+                    <div aria-hidden="true" class="modal modal-va-middle fade" id="result" role="dialog" tabindex="-1">
+                        <div class="modal-dialog modal-xs">
+                            <div class="modal-content">
+                                <div class="modal-inner">
+                                    <p class="h5 margin-top-sm text-black-hint" id="msg"></p>
+                                </div>
+                                <div class="modal-footer">
+                                    <p class="text-right"><button class="btn btn-flat btn-brand-accent waves-attach" data-dismiss="modal" type="button" id="result_ok">知道了</button></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+					<!--    <div class="col-lg-12 col-md-12">
 						<div class="card margin-bottom-no">
 							<div class="card-main">
 								<div class="card-inner">
@@ -125,7 +159,7 @@
 								</div>
 							</div>
 						</div>
-					</div>
+					</div>    -->
 					
 					
 					
@@ -145,21 +179,13 @@
 
 
 <script>
-    $(document).ready(function () {
-        $("#invite").click(function () {
-            $.ajax({
-                type: "POST",
-                url: "/user/invite",
-                dataType: "json",
-                success: function (data) {
-                    window.location.reload();
-                },
-                error: function (jqXHR) {
-                    $("#result").modal();
-					$("#msg").html("发生错误：" + jqXHR.status);
-                }
-            })
-        })
-    })
+    $(function(){
+        new Clipboard('.copy-text');
+    });
+    
+    $(".copy-text").click(function () {
+        $("#result").modal();
+        $("#msg").html("已拷贝邀请链接");
+    });
 </script>
 

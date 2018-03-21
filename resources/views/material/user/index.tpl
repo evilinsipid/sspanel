@@ -85,9 +85,6 @@
 														{$user = URL::getSSRConnectInfo($pre_user)}
 														{$ssr_url_all = URL::getAllUrl($pre_user, 0, 0)}
 														{$ssr_url_all_mu = URL::getAllUrl($pre_user, 1, 0)}
-														{if $user->class==0}
-															<p><h4><span class="icon icon-lg">start</span> 尊敬的{$user->user_name}，您还未购买任何套餐或套餐已过期。请先到<a href="/user/code">充值界面</a>充值金额，再到<a href="/user/shop">商店界面</a>购买套餐，否则将无法使用。</p></h4>
-														{/if}
 														<p><span class="icon icon-lg text-white">looks_one</span><a href="/ssr-download/ssr-win.7z"> 点击我下载</a></p>
 														<p><span class="icon icon-lg text-white">looks_two</span> 解压至任意磁盘</p>
 														<p><span class="icon icon-lg text-white">looks_3</span> 运行程序(以下操作全部在任务栏右下角的纸飞机图标右键操作)</p>
@@ -100,9 +97,6 @@
 														<p><a href="/user/announcement">点击这里查看Windows傻瓜式教程</a></p> 
 													</div>
 													<div class="tab-pane fade" id="all_ssr_mac">
-														{if $user->class==0}
-															<p><h4><span class="icon icon-lg">start</span> 尊敬的{$user->user_name}，您还未购买任何套餐或套餐已过期。请先到<a href="/user/code">充值界面</a>充值金额，再到<a href="/user/shop">商店界面</a>购买套餐，否则将无法使用。</p></h4>
-														{/if}
 														<p><span class="icon icon-lg text-white">looks_one</span><a href="/ssr-download/ssr-mac.dmg"> 点击我下载</a></p>
                                                       	<p><span class="icon icon-lg text-white">looks_two</span> 打开下载的Dmg文件</p>
                                                      	<p><span class="icon icon-lg text-white">looks_3</span> 把ShadowsocksX拖入到Finder的应用程序列表(Applications)</p>
@@ -115,15 +109,9 @@
 														<p><a href="/user/announcement">点击这里查看Mac傻瓜式教程</a></p> 
 													</div>
 													<div class="tab-pane fade" id="all_ssr_linux">
-														{if $user->class==0}
-															<p><h4><span class="icon icon-lg">start</span> 尊敬的{$user->user_name}，您还未购买任何套餐或套餐已过期。请先到<a href="/user/code">充值界面</a>充值金额，再到<a href="/user/shop">商店界面</a>购买套餐，否则将无法使用。</p></h4>
-														{/if}
 														<p><a href="/Course.html#Linux">点击这里查看Linux傻瓜式教程</a></p> 
 													</div>
 													<div class="tab-pane fade" id="all_ssr_ios">
-														{if $user->class==0}
-															<p><h4><span class="icon icon-lg">start</span> 尊敬的{$user->user_name}，您还未购买任何套餐或套餐已过期。请先到<a href="/user/code">充值界面</a>充值金额，再到<a href="/user/shop">商店界面</a>购买套餐，否则将无法使用。</p></h4>
-														{/if}
                                                         <p><span class="icon icon-lg text-white">looks_one</span> 切换<code>App Store</code>账号-ID:<code>xxxxxxxxx</code> 密码<code>{if $user->class==0}密码仅充值套餐可见{else}xxxxxxxxx{/if}</code>注意特殊符号与大小写,显示按钮buy，3.99$，请直接buy安装（不会扣钱）。（千万不要试图登陆iCloud，会上传您的照片与通讯录到这个账户上）</p>
                                                         <p><span class="icon icon-lg text-white">looks_two</span> 商店搜索<code>Shadowrocket</code>下载安装</p>
                                                       	<p><span class="icon icon-lg text-white">looks_3</span> 安装完成后切换回您自己的账号。（请务必切换回您自己的账户）</p>
@@ -137,9 +125,6 @@
 														<p><a href="/user/announcement">点击这里查看iOS傻瓜式教程</a></p> 
 													</div>
 													<div class="tab-pane fade" id="all_ssr_android">
-														{if $user->class==0}
-															<p><h4><span class="icon icon-lg">start</span> 尊敬的{$user->user_name}，您还未购买任何套餐或套餐已过期。请先到<a href="/user/code">充值界面</a>充值金额，再到<a href="/user/shop">商店界面</a>购买套餐，否则将无法使用。</p></h4>
-														{/if}
 														<p><span class="icon icon-lg text-white">filter_1</span><a href="/ssr-download/ssr-android.apk"> 点击我下载</a>并安装</p>
 														<p><span class="icon icon-lg text-white">filter_2</span> 打开App，先点击左上角的shadowsocksR，再点击右下角的<span class="icon icon-lg text-white">add</span>号图标</p>
                                                         <p><span class="icon icon-lg text-white">filter_3</span> 添加/升级 SSR订阅</p>
@@ -157,9 +142,6 @@
 														<p><a href="/user/announcement">点击这里查看Android傻瓜式教程</a></p>
 													</div>
 													<div class="tab-pane fade" id="all_ssr_router">
-														{if $user->class==0}
-															<p><h4><span class="icon icon-lg">start</span> 尊敬的{$user->user_name}，您还未购买任何套餐或套餐已过期。请先到<a href="/user/code">充值界面</a>充值金额，再到<a href="/user/shop">商店界面</a>购买套餐，否则将无法使用。</p></h4>
-														{/if}
 														<p>路由器 刷入<a href="http://www.right.com.cn/forum/thread-161324-1-1.html">这个固件</a>，然后 SSH 登陆路由器，执行以下命令（导入普通端口）<br>
 														<code>wget -O- {$baseUrl}/link/{$router_token}?is_ss=0 | bash && echo -e "\n0 */3 * * * wget -O- {$baseUrl}/link/{$router_token}?is_ss=0 | bash\n">> /etc/storage/cron/crontabs/admin && killall crond && crond </code><br>
 														这个单端口多用户的<br>
@@ -167,9 +149,6 @@
 														执行完毕以后就可以到路由器的设置面板里随意选择 Shadowsocks 服务器进行连接了。</p>
 													</div>
                                                     <div class="tab-pane fade" id="all_ssr_game">
-														{if $user->class==0}
-															<p><h4><span class="icon icon-lg">start</span> 尊敬的{$user->user_name}，您还未购买任何套餐或套餐已过期。请先到<a href="/user/code">充值界面</a>充值金额，再到<a href="/user/shop">商店界面</a>购买套餐，否则将无法使用。</p></h4>
-														{/if}
 														<p><span class="icon icon-lg text-white">looks_one</span><a href="/ssr-download/SSTap-beta-setup-1.1.0.1.7z"> 点击我下载</a></p>
 														<p><span class="icon icon-lg text-white">looks_two</span> 安装，期间会安装虚拟网卡，请点击允许或确认</p>
 														<p><span class="icon icon-lg text-white">looks_3</span> 打开桌面程序SSTap</p>
@@ -185,9 +164,6 @@
 														{$ssr_url_all = URL::getAllUrl($pre_user, 0, 0)}
 														{$ssr_url_all_mu = URL::getAllUrl($pre_user, 1, 0)}
 														
-														{if $user->class==0}
-															<p><h4><span class="icon icon-lg">start</span> 尊敬的{$user->user_name}，您还未购买任何套餐或套餐已过期。请先到<a href="/user/code">充值界面</a>充值金额，再到<a href="/user/shop">商店界面</a>购买套餐，否则将无法使用。</p></h4>
-														{/if}
 														{if URL::SSRCanConnect($user)}
 														<dl class="dl-horizontal">
 															<p><dt>端口</dt>
@@ -282,9 +258,6 @@
 														{$ss_url_all = URL::getAllUrl($pre_user, 0, 1)}
 														{$ss_url_all_mu = URL::getAllUrl($pre_user, 1, 1)}
 														{$ss_url_all_win = URL::getAllUrl($pre_user, 0, 2)}
-														{if $user->class==0}
-															<p><h4><span class="icon icon-lg">start</span> 尊敬的{$user->user_name}，您还未购买任何套餐或套餐已过期。请先到<a href="/user/code">充值界面</a>充值金额，再到<a href="/user/shop">商店界面</a>购买套餐，否则将无法使用。</p></h4>
-														{/if}
 														<p><span class="icon icon-lg text-white">looks_one</span><a href="/ssr-download/ss-win.zip"> 点击我下载</a></p>
                                                         <p><span class="icon icon-lg text-white">looks_two</span> 解压至任意磁盘</p>
                                                         <p><span class="icon icon-lg text-white">looks_3</span> 运行程序(以下操作全部在任务栏右下角的纸飞机图标右键操作)</p>
@@ -296,9 +269,6 @@
 														<p><a href="/user/announcement">点击这里查看Windows傻瓜式教程</a></p> 
 													</div>
 													<div class="tab-pane fade" id="all_ss_mac">
-														{if $user->class==0}
-															<p><h4><span class="icon icon-lg">start</span> 尊敬的{$user->user_name}，您还未购买任何套餐或套餐已过期。请先到<a href="/user/code">充值界面</a>充值金额，再到<a href="/user/shop">商店界面</a>购买套餐，否则将无法使用。</p></h4>
-														{/if}
 														<p><span class="icon icon-lg text-white">filter_1</span><a href="/ssr-download/ss-mac.zip"> 点击我下载</a></p>
                                                       	<p><span class="icon icon-lg text-white">filter_2</span> 打开下载的Zip文件</p>
                                                      	<p><span class="icon icon-lg text-white">filter_3</span> 把ShadowsocksX拖入到Finder的应用程序列表(Applications)</p>
@@ -311,15 +281,9 @@
 														<p><a href="/user/announcement">点击这里查看Mac傻瓜式教程</a></p> 
 													</div>
 													<div class="tab-pane fade" id="all_ss_linux">
-														{if $user->class==0}
-															<p><h4><span class="icon icon-lg">start</span> 尊敬的{$user->user_name}，您还未购买任何套餐或套餐已过期。请先到<a href="/user/code">充值界面</a>充值金额，再到<a href="/user/shop">商店界面</a>购买套餐，否则将无法使用。</p></h4>
-														{/if}
 														<p><a href="/Course.html#Linux">点击这里查看Linux傻瓜式教程</a></p> 
 													</div>
 													<div class="tab-pane fade" id="all_ss_ios">
-														{if $user->class==0}
-															<p><h4><span class="icon icon-lg">start</span> 尊敬的{$user->user_name}，您还未购买任何套餐或套餐已过期。请先到<a href="/user/code">充值界面</a>充值金额，再到<a href="/user/shop">商店界面</a>购买套餐，否则将无法使用。</p></h4>
-														{/if}
                                                         <p><span class="icon icon-lg text-white">looks_one</span> 切换<code>App Store</code>账号-ID:<code>xxxxxxxxx</code> 密码<code>{if $user->class==0}密码仅充值套餐可见{else}xxxxxxxxx{/if}</code>注意特殊符号与大小写,显示按钮buy，3.99$，请直接buy安装（不会扣钱）。（千万不要试图登陆iCloud，会上传您的照片与通讯录到这个账户上）</p>
                                                         <p><span class="icon icon-lg text-white">looks_two</span> 商店搜索<code>Shadowrocket</code>下载安装</p>
                                                       	<p><span class="icon icon-lg text-white">looks_3</span> 安装完成后切换回您自己的账号。（请务必切换回您自己的账户）</p>
@@ -333,9 +297,6 @@
 														<p><a href="/user/announcement">点击这里查看iOS傻瓜式教程</a></p> 
 													</div>
 													<div class="tab-pane fade" id="all_ss_android">
-														{if $user->class==0}
-															<p><h4><span class="icon icon-lg">start</span> 尊敬的{$user->user_name}，您还未购买任何套餐或套餐已过期。请先到<a href="/user/code">充值界面</a>充值金额，再到<a href="/user/shop">商店界面</a>购买套餐，否则将无法使用。</p></h4>
-														{/if}
 														<p><span class="icon icon-lg text-white">filter_1</span><a href="/ssr-download/ss-android.apk"> 点击我下载</a>并安装</p>
 														<p><span class="icon icon-lg text-white">filter_2</span><a class="copy-text" data-clipboard-text="{$ss_url_all_win}"> 点击我复制SS链接</a></p>
 														<p><span class="icon icon-lg text-white">filter_3</span> 打开App，点击右下角的<span class="icon icon-lg text-white">add</span>号图标</p>
@@ -352,9 +313,6 @@
 														<p><a href="/user/announcement">点击这里查看Android傻瓜式教程</a></p>
 													</div>
 													<div class="tab-pane fade" id="all_ss_router">
-														{if $user->class==0}
-															<p><h4><span class="icon icon-lg">start</span> 尊敬的{$user->user_name}，您还未购买任何套餐或套餐已过期。请先到<a href="/user/code">充值界面</a>充值金额，再到<a href="/user/shop">商店界面</a>购买套餐，否则将无法使用。</p></h4>
-														{/if}
 														<p>路由器 刷入<a href="http://www.right.com.cn/forum/thread-161324-1-1.html">这个固件</a>，然后 SSH 登陆路由器，执行以下命令（导入普通端口）<br>
 														<code>wget -O- {$baseUrl}/link/{$router_token}?is_ss=1 | bash && echo -e "\n0 */3 * * * wget -O- {$baseUrl}/link/{$router_token}?is_ss=1 | bash\n">> /etc/storage/cron/crontabs/admin && killall crond && crond </code><br>
 														或者这个单端口多用户的<br>
@@ -367,9 +325,6 @@
 														{$ss_url_all_mu = URL::getAllUrl($pre_user, 1, 1)}
 														{$ss_url_all_win = URL::getAllUrl($pre_user, 0, 2)}
 
-														{if $user->class==0}
-															<p><h4><span class="icon icon-lg">start</span> 尊敬的{$user->user_name}，您还未购买任何套餐或套餐已过期。请先到<a href="/user/code">充值界面</a>充值金额，再到<a href="/user/shop">商店界面</a>购买套餐，否则将无法使用。</p></h4>
-														{/if}
 														{if URL::SSCanConnect($user)}
 														<dl class="dl-horizontal">
 															<p>各个节点的地址请到节点列表查看！</p>
@@ -435,6 +390,9 @@
 								<div class="card-main">
 									<div class="card-inner margin-bottom-no">
 										<p class="card-heading"><i class="icon icon-md">account_circle</i>账号使用情况</p>
+                                        {if $user->class==0}
+                                            <p><h4><span class="icon icon-lg">start</span> 尊敬的{$user->user_name}，您还未购买任何套餐或套餐已过期。请先到<a href="/user/code">充值界面</a>充值金额，再到<a href="/user/shop">商店界面</a>购买套餐，否则将无法使用。</p></h4>
+										{/if}
 										<dl class="dl-horizontal">
 											<p><dt>账号等级</dt>
 											<dd><i class="icon icon-md t4-text">stars</i>&nbsp;{$user->class}</dd></p>
