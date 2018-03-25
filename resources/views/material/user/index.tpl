@@ -120,7 +120,7 @@
                                                       	<p><span class="icon icon-lg text-white">looks_3</span> 安装完成后切换回您自己的账号。（请务必切换回您自己的账户）</p>
 												<!--    <p>两种方式导入所有节点</p> 
                                                         <p>1、在 Safari 中点击 <a href="{$ssr_url_all}">这个（普通端口）</a>或者<a href="{$ssr_url_all_mu}">这个（单端口多用户）</a>，然后点击确定，就可以批量添加节点。</p>   -->
-														<p><span class="icon icon-lg text-white">looks_4</span> 打开Shadowrocket软件后，点击右上角<span class="icon icon-lg text-white">add</span>，添加类型为<code>Subscribe</code>，URL填写以下<code><span class="icon icon-lg text-white">flash_auto</span>订阅地址</code>即可自动更新节点</p>
+														<p><span class="icon icon-lg text-white">looks_4</span> 打开Shadowrocket软件后，点击右上角<span class="icon icon-lg text-white">add</span>，添加类型为<code>Subscribe</code>，URL填写以下<code><span class="icon icon-lg text-white">flash_auto</span>订阅地址</code>并点击右上角完成。接着点击右下角“设置”，在“其他”这一栏点击“服务器订阅”，把“打开时更新”打勾，即可自动更新节点</p>
 														<p><span class="icon icon-lg text-white">looks_5</span> 选择任意节点点击连接，然后点击allow后解锁指纹</p>
 														<p><span class="icon icon-lg text-white">looks_6</span> 注意：第一次连接可能不能用，导入后程序退出并重新打开程序连接即可！</p>
 														<p><span class="icon icon-lg text-white">flash_auto</span> 订阅地址：<input type="text" class="input form-control form-control-monospace" name="input1" readonly="" value="{$baseUrl}/link/{$ssr_sub_token}?mu=0"><button class="copy-text btn btn-subscription" type="button" data-clipboard-text="{$baseUrl}/link/{$ssr_sub_token}?mu=0">点击拷贝订阅地址</button><br>
@@ -292,7 +292,7 @@
                                                       	<p><span class="icon icon-lg text-white">looks_3</span> 安装完成后切换回您自己的账号。（请务必切换回您自己的账户）</p>
 												<!--    <p>两种方式导入所有节点</p> 
                                                         <p>1、在 Safari 中点击 <a href="{$ssr_url_all}">这个（普通端口）</a>或者<a href="{$ssr_url_all_mu}">这个（单端口多用户）</a>，然后点击确定，就可以批量添加节点。</p>   -->
-														<p><span class="icon icon-lg text-white">looks_4</span> 打开Shadowrocket软件后，点击右上角<span class="icon icon-lg text-white">add</span>，添加类型为<code>Subscribe</code>，URL填写以下<code><span class="icon icon-lg text-white">flash_auto</span>订阅地址</code>即可自动更新节点</p>
+														<p><span class="icon icon-lg text-white">looks_4</span> 打开Shadowrocket软件后，点击右上角<span class="icon icon-lg text-white">add</span>，添加类型为<code>Subscribe</code>，URL填写以下<code><span class="icon icon-lg text-white">flash_auto</span>订阅地址</code>并点击右上角完成。接着点击右下角“设置”，在“其他”这一栏点击“服务器订阅”，把“打开时更新”打勾，即可自动更新节点</p>
 														<p><span class="icon icon-lg text-white">looks_5</span> 选择任意节点点击连接，然后点击allow后解锁指纹</p>
 														<p><span class="icon icon-lg text-white">looks_6</span> 注意：第一次连接可能不能用，导入后程序退出并重新打开程序连接即可！</p>
 														<p><span class="icon icon-lg text-white">flash_auto</span> 订阅地址：<input type="text" class="input form-control form-control-monospace" name="input1" readonly="" value="{$baseUrl}/link/{$ssr_sub_token}?mu=0"><button class="copy-text btn btn-subscription" type="button" data-clipboard-text="{$baseUrl}/link/{$ssr_sub_token}?mu=0">点击拷贝订阅地址</button><br>
