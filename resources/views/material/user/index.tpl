@@ -112,7 +112,7 @@
 														<p><a href="/user/announcement">点击这里查看Mac傻瓜式教程</a></p> 
 													</div>
 													<div class="tab-pane fade" id="all_ssr_linux">
-														<p><a href="/Course.html#Linux">点击这里查看Linux傻瓜式教程</a></p> 
+														<p><a href="/user/announcement">点击这里查看Linux傻瓜式教程</a></p> 
 													</div>
 													<div class="tab-pane fade" id="all_ssr_ios">
                                                         <p><span class="icon icon-lg text-white">looks_one</span> 切换<code>App Store</code>账号-ID:<code>xxxxxxxxx</code> 密码<code>{if $user->class==0}密码仅充值套餐可见{else}xxxxxxxxx{/if}</code>注意特殊符号与大小写,显示按钮buy，3.99$，请直接buy安装（不会扣钱）。（千万不要试图登陆iCloud，会上传您的照片与通讯录到这个账户上）</p>
@@ -284,7 +284,7 @@
 														<p><a href="/user/announcement">点击这里查看Mac傻瓜式教程</a></p> 
 													</div>
 													<div class="tab-pane fade" id="all_ss_linux">
-														<p><a href="/Course.html#Linux">点击这里查看Linux傻瓜式教程</a></p> 
+														<p><a href="/user/announcement">点击这里查看Linux傻瓜式教程</a></p> 
 													</div>
 													<div class="tab-pane fade" id="all_ss_ios">
                                                         <p><span class="icon icon-lg text-white">looks_one</span> 切换<code>App Store</code>账号-ID:<code>xxxxxxxxx</code> 密码<code>{if $user->class==0}密码仅充值套餐可见{else}xxxxxxxxx{/if}</code>注意特殊符号与大小写,显示按钮buy，3.99$，请直接buy安装（不会扣钱）。（千万不要试图登陆iCloud，会上传您的照片与通讯录到这个账户上）</p>
