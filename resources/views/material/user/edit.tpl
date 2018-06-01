@@ -252,12 +252,12 @@
 								<div class="card-inner">
 									<div class="card-inner">
 										<p class="card-heading">每日邮件接收设置</p>
-										<p>当前设置：{if $user->sendDailyMail==1} 发送 {else} 不发送 {/if}</p>
+										<p>当前设置：{if $user->sendDailyMail==0} 发送 {else} 不发送 {/if}</p>
 										<div class="form-group form-group-label">
 											<label class="floating-label" for="mail">发送设置</label>
 											<select id="mail" class="form-control">
-												<option value="1">发送</option>
-												<option value="0">不发送</option>
+												<option value="0">发送</option>
+												<option value="1">不发送</option>
 											</select>
 										</div>
 
