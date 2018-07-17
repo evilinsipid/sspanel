@@ -36,7 +36,7 @@
 
 								</div>
 							</div>
-
+                            {if $user->class!=0}
 							<div class="card">
 								<div class="card-main">
 									<div class="card-inner margin-bottom-no">
@@ -93,7 +93,7 @@
 														<p><span class="icon icon-lg text-white">looks_3</span> 运行程序(以下操作全部在任务栏右下角的纸飞机图标右键操作)</p>
 														<p> <span class="icon icon-lg text-white">looks_4</span> 服务器订阅<span class="icon icon-lg text-white">play_arrow</span>SSR服务器订阅设置<span class="icon icon-lg text-white">play_arrow</span>Add<span class="icon icon-lg text-white">play_arrow</span>清空网址栏内容，将订阅链接设置为下面的<code><span class="icon icon-lg text-white">flash_auto</span>订阅地址</code>，并点击确定。</p> 
 														<p> <span class="icon icon-lg text-white">looks_5</span> 服务器订阅<span class="icon icon-lg text-white">play_arrow</span>更新SSR服务器订阅(不通过代理)，并把“服务器负载均衡”关掉。</p>
-														<p> <span class="icon icon-lg text-white">looks_6</span> 然后右键小飞机图标<span class="icon icon-lg text-white">play_arrow</span>服务器<span class="icon icon-lg text-white">play_arrow</span>谜之屋，选择一个合适的服务器，以及PAC<span class="icon icon-lg text-white">play_arrow</span>更新PAC为GFWList，代理规则选“绕过局域网和大陆”，系统代理模式建议选“PAC模式”(PAC模式会根据规则，国内网站不走代理，国外网站走代理；全局模式是所有网站都走代理），即可上网。</p>
+														<p> <span class="icon icon-lg text-white">looks_6</span> 然后右键小飞机图标<span class="icon icon-lg text-white">play_arrow</span>服务器<span class="icon icon-lg text-white">play_arrow</span>谜之屋，选择一个合适的服务器，<!--以及PAC<span class="icon icon-lg text-white">play_arrow</span>更新PAC为GFWList，-->代理规则选“绕过局域网和大陆”，系统代理模式建议选“PAC模式”(PAC模式会根据规则，国内网站不走代理，国外网站走代理；全局模式是所有网站都走代理），即可上网。</p>
 														<p><span class="icon icon-lg text-white">flash_auto</span> 订阅地址：<input type="text" class="input form-control form-control-monospace" name="input1" readonly="" value="{$baseUrl}/link/{$ssr_sub_token}?mu=0"><button class="copy-text btn btn-subscription" type="button" data-clipboard-text="{$baseUrl}/link/{$ssr_sub_token}?mu=0">点击拷贝订阅地址</button><br>
 														<!--	单端口多用户端口订阅地址：<code>{$baseUrl}/link/{$ssr_sub_token}?mu=1</code>  -->
 														</p>
@@ -384,7 +384,7 @@
 
 								</div>
 							</div>
-
+                            {/if}
 						</div>
 
 						<div class="col-lg-6 col-md-6">
